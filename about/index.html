@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>わたしについて</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- グーグル除け -->
+<meta name="robots" content="noindex,nofollow">
+
+<!-- フォント（Zen Kaku Gothic New） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body>
+<!-- 下層ページ→トップに戻る -->
+<a href="index.html" class="back-btn">
+    <img src="../img/top_back.png" alt="トップに戻る" width="160" height="214">
+</a>
+
+<!-- 下層ページ→ヘッダー -->
+<header>
+    <a href="../index.html"><img src="../img/header_logo.png" alt="ポートフォリオロゴ" width="115" height="38"></a>
+    <nav>
+        <ul>
+            <a href="../index.html"><li>トップ</li></a>
+            <a href="../index.html#works"><li>デザインしたもの</li></a>
+            <a href="../about/index.html"><li>わたしについて</li></a>
+        </ul>
+    </nav>
+</header>
+
+<!-- わたしについて→わたしについて -->
+<main class="aboutme">
+    <section class="about">
+        <div class="w1200">
+            <h2>わたしについて</h2>
+            <div class="box">
+                <img src="../img/top_about.png" alt="" width="350" height="240">
+                <div class="txt">
+                    <h3>かとう みなみ</h3>
+                    <p>大学卒業後、空港で保安検査員として1年間勤務。
+                    <br>Webデザインの、伝えたい情報をデザインや動きでより分かりやすく表現できる点に関心を持ち、挑戦を決意。職業訓練校でWebデザインやコーディングについて学び、現在は転職活動をしています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- わたしについて→つよみ -->
+    <section class="strong">
+        <div class="w1200">
+            <h2>わたしのつよみ</h2>
+            <div class="box">
+                <div>
+                    <h4>多角的</h4>
+                    <p class="txt15">物事を先入観や決めつけで判断せず、多様な意見や視点を取り入れながら考えることを大切にしています。</p>
+                </div>
+                <div>
+                    <h4>好奇心</h4>
+                    <p class="txt15">好奇心旺盛で、新しいことやわくわくすることには柔軟に挑戦します。幅広い分野に興味を持ち、前向きに取り組む性格です。</p>
+                </div>
+                <div>
+                    <h4>主体性</h4>
+                    <p class="txt15">常に疑問を持ち、自分なりの考えを大切にしています。受け身にならず、自分の意思で物事に向き合い、納得するまで考え抜きます。</p>
+                </div>
+                <div>
+                    <h4>集中力</h4>
+                    <p class="txt15">限られた時間の中で、無駄を省き制作に没頭することで、時間内に最大限の成果を出すことを大切にしています。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- わたしについて→できること -->
+    <section class="skill">
+        <div class="w1200">
+            <h2>できること</h2>
+            <div>
+                <h4>デザイン</h4>
+                <p>Illustrator Photoshop InDesign Figma</p>
+            </div>
+            <div>
+                <h4>コーディング</h4>
+                <p>Visual Studio Code ( HTML , CSS , jQuery )</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- 下層ページ→フッター -->
+<footer>
+    <p class="thanks">この度は貴重なお時間をいただき、誠にありがとうございました。
+    <br>これからのご縁につながりましたら幸いです!!</p>
+    <p class="copy">＠2025MINAMIKATO</p>
+</footer>
+
+
+<!-- ふわっとするためのJS -->
+<script>
+  const allElements = document.querySelectorAll('main *');
+  allElements.forEach(el => el.setAttribute('data-fade', ''));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 一度表示されたら監視解除
+      }
+    });
+  });
+  allElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+
+</html>

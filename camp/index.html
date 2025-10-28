@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>グランピング場</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- グーグル除け -->
+<meta name="robots" content="noindex,nofollow">
+
+<!-- フォント（Zen Kaku Gothic New） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!-- スライダー用JSとCSS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body>
+<!-- 下層ページ→トップに戻る -->
+<a href="index.html" class="back-btn">
+    <img src="../img/top_back.png" alt="トップに戻る" width="160" height="214">
+</a>
+
+<!-- 下層ページ→ヘッダー -->
+<header>
+    <a href="../index.html"><img src="../img/header_logo.png" alt="ポートフォリオロゴ" width="115" height="38"></a>
+    <nav>
+        <ul>
+            <a href="../index.html"><li>トップ</li></a>
+            <a href="../index.html#works"><li>デザインしたもの</li></a>
+            <a href="../about/index.html"><li>わたしについて</li></a>
+        </ul>
+    </nav>
+</header>
+
+<!-- どんぶら→概要 -->
+<main class="donbura">
+    <section class="summary">
+        <div class="w1200">
+            <h2>親子向けグランピングサイト</h2>
+            <p>10ページのサイト制作</p>
+            <div class="time">
+                <h4>制作時間</h4>
+                <p class="frame">企画</p>
+                <p class="fw500">8h</p>
+                <p class="frame">デザイン</p>
+                <p class="fw500">32h</p>
+                <p class="frame">コーディング</p>
+                <p class="fw500">32h</p>
+            </div>
+            <div class="outline">
+                <a href="../donbura/index.html"><img src="../img/donbura.png" alt="" width="550" height="412"></a>
+                <div>
+                    <h4>コンバージョン</h4>
+                    <p>ファミリー層への安心感訴求と来場予約の促進</p>
+                    <h4>ペルソナ</h4>
+                    <p>35-38 の女性</p>
+                    <h4>使用ツール</h4>
+                    <p>Figma／Visual Studio Code</p>
+                    <h4>コンセプト</h4> 
+                    <p>#親しみやすい #温かい #遊び心</p>                   
+                </div>
+            </div>
+            <a href="../donbura/index.html"><p class="btn">サイトをみる&nbsp;+</p></a>
+        </div>
+    </section>
+
+<!-- どんぶら→思考プロセス -->
+    <section class="paper">
+        <div class="w1200">
+            <h2>思考プロセス</h2>
+            <div class="box">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/donbura_1.png" alt="どんぶら1ページ目" width="800" height="565"></div>
+                        <div class="swiper-slide"><img src="../img/donbura_2.png" alt="どんぶら2ページ目" width="800" height="565"></div>
+                        <div class="swiper-slide"><img src="../img/donbura_3.png" alt="どんぶら3ページ目" width="800" height="565"></div>
+                    </div>
+                    <!-- ページネーション（●のやつ） -->
+                    <div class="swiper-pagination"></div>
+                    <!-- 矢印ボタン -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- どんぶら→トップデザイン -->
+    <section class="design">
+        <div class="w1200">
+            <h2>トップページデザイン</h2>
+            <img src="../img/donbura_top.png" alt="どんぶらのトップページ" width="850" height="4711">
+            <a href="../index.html#works"><p class="btn">一覧へもどる</p></a>
+        </div>
+    </section>
+</main>
+
+<!-- 下層ページ→フッター -->
+<footer>
+    <p class="thanks">この度は貴重なお時間をいただき、誠にありがとうございました。
+    <br>これからのご縁につながりましたら幸いです!!</p>
+    <p class="copy">＠2025MINAMIKATO</p>
+</footer>
+
+
+
+<!-- スライダーのためのコード -->
+<script>
+    const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 0,
+    loop: true, // スライドが途切れずループ
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    });
+</script>
+
+<!-- ふわっとするためのJS -->
+<script>
+  const allElements = document.querySelectorAll('main *');
+  allElements.forEach(el => el.setAttribute('data-fade', ''));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 一度表示されたら監視解除
+      }
+    });
+  });
+  allElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+
+</html>

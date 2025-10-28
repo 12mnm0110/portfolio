@@ -1,0 +1,1847 @@
+@charset "utf-8";
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　ポートフォリオに戻る
+ーーーーーーーーーーーーーーーーーー */
+.back-btn {
+    position: fixed;   
+    top: 50%;  
+    left: 50px;     
+    z-index: 9999;    
+}
+
+.back-btn img {
+    width: 80px;   
+    height: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.back-btn:hover img {
+    transform: scale(1.05); 
+}
+
+.back-btn:hover img:hover{
+    opacity:1;
+}
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　　共通設定
+ーーーーーーーーーーーーーーーーーー */
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a:link{text-decoration: none; color: #0f2c5f;}
+a:visited {text-decoration: none; color: #0f2c5f;}
+a:hover{text-decoration: underline; color: #242424;}
+a:active {text-decoration: underline; color: #242424;}
+
+a img{transition:0.2s;}
+a img:hover{opacity:0.8;}
+
+/* 共通 */
+h2{
+    color: #0f2c5f;
+    font-size: 36px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+}
+
+.sub{
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+}
+
+.summary{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 170%;
+    text-align: center; 
+}
+
+.btn{
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+/* チェックボックス */
+label input[type="checkbox"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+input[type="checkbox"] {
+    appearance: none; 
+    width: 25px;
+    height: 25px;
+    border: solid 1px #0f2c5f;
+    background-color: #fff;
+    cursor: pointer;
+    position: relative;
+}
+input[type="checkbox"]:checked {
+    background-color: #0f2c5f;
+    position: relative;
+}
+input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 17px;
+    height: 13px;
+    transform: translate(-50%, -50%);
+    background-image: url(../img/checkmark.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ラジオボタン */
+input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 25px;
+    height: 25px;
+    border: 1px solid #0f2c5f;
+    border-radius: 50%; 
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    position: relative;
+}
+input[type="radio"]:checked::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 12px;
+    height: 12px;
+    transform: translate(-50%, -50%);
+    background-color: #0f2c5f;
+    border-radius: 50%;
+}
+label input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　全ページ共通
+ーーーーーーーーーーーーーーーーーー */
+/* ヘッダー */
+header{
+    width:1200px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 1px 50px -35px #242424;
+    background-color: #fff;
+    position: fixed;
+    z-index: 9999;
+}
+
+main{
+    padding-top: 80px;
+}
+
+header img{
+    margin: 0 350px 0 30px;
+    width: 100px;
+    height: auto;
+}
+
+header ul{
+    width: 520px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-right: 40px;
+}
+
+header li{
+    color: #242424;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+header .btn{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 0.02em;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    background-color: #0f2c5f;
+    width: 130px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* フッター */
+footer{
+    background-color: #0f2c5f;
+    width: 1200px;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .address1{
+    color:#fff;
+    font-size: 15px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    line-height: 170%;
+    margin: 40px 0 10px 0;
+}
+
+footer .address2{
+    color:#fff;
+    font-size: 11px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    margin-bottom: 5px;
+}
+
+footer .box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+footer .btns{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+}
+
+footer .box img{
+    margin: 0 10px;
+}
+
+footer .btn{
+    color:#0f2c5f;
+    background-color: #fff;
+    font-size: 18px;
+    width: 140px;
+    height: 54px;
+    margin-left: 20px;
+}
+
+footer ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+footer li{
+    color: #fff;
+    font-size: 12px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    margin-left: 20px;
+}
+
+footer .copyright{
+    color:#fff;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    margin-top: 40px;
+}
+
+/* パンくずリスト */
+.undernav{
+    color: #b5b7c0;
+    background-color: #e9ecf4;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    width: 1200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+.undernav .was{
+    color: #b5b7c0;
+}
+
+.undernav .now{
+    color: #242424;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　トップページ
+ーーーーーーーーーーーーーーーーーー */
+/* TOP→ファーストビュー */
+.top_first{
+    width: 1200px;
+    height: 650px;
+    margin-bottom: 100px;
+    background-image: url(../img/top_first.png);
+    padding-top: 10px;
+}
+
+.top_first h1{
+    color: #70768d;
+    font-size: 60px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    writing-mode: vertical-rl;  
+    margin: 60px 0 0 260px;
+    text-shadow: 0px 0px 80px #fff;
+}
+
+.top_first .em{
+    letter-spacing: -0.6em;
+}
+
+.top_first .big{
+    font-size: 90px;
+    font-weight: 600;
+}
+
+/* TOP→私たちについて */
+.aboutus{
+    margin-bottom: 100px;
+    background-image: url(../img/top_aboutus.png);
+    width: 1200px;
+    height: 633px;
+    padding: 100px;
+}
+
+.aboutus h2{
+    margin-top: 50px;
+}
+
+.aboutus .sub{
+    color: #0f2c5f;
+    margin-bottom: 50px;  
+}
+
+.aboutus p{
+    color: #242424;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;   
+    margin-bottom: 80px;
+    line-height: 36px;
+}
+
+.aboutus .btn{
+    color: #fff;
+    background-color: #0f2c5f;
+    width: 225px;
+    height: 50px;
+    margin-left: 310px;
+    box-shadow: 0px 0px 5px -1px #242424;  
+}
+
+.aboutus .white{
+    background-color: #fff;
+}
+
+/* TOP→商品 */
+.collection{
+    width: 1200px;
+    margin-bottom: 100px;
+}
+
+.collection h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.collection .summary{
+    margin-bottom: 60px;
+}
+
+.collection .btn1{
+    background-image: url(../img/top_collection1.png);
+    width: 1200px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.collection .btn2{
+    background-image: url(../img/top_collection2.png);
+    width: 1200px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+}
+
+.collection .pp{
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    text-shadow: 0px 0px 50px #fff;
+}
+
+.collection .pleft1{
+    margin-left: 700px;
+}
+
+.collection .pleft2{
+    margin-left: 150px;
+}
+
+
+.collection .pcenter{
+    font-size: 30px;
+    margin-top: 24px;
+}
+
+.collection .pright{
+    font-size: 30px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400; 
+    margin-top: 24px;
+}
+
+.collection a:link{text-decoration: none; color: #242424;}
+.collection a:visited {text-decoration: none; color: #242424;}
+.collection a:hover{text-decoration: none; color: #70768d;}
+.collection a:active {text-decoration: none; color: #70768d;}
+
+/* TOP→パラジウム */
+.palladium{
+    width: 1200px;
+    height: 780px;
+    background-image: url(../img/top_palladium.png);
+    padding: 70px;
+}
+
+.palladium h2{
+    color: #fff;
+    margin-top: 40px;
+}
+
+.palladium .sub{
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+    color: #fff; 
+    margin-bottom: 55px;  
+}
+
+.palladium .btn{
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500; 
+    color: #0f2c5f;
+    background-color: #fff;
+    width: 210px;
+    height: 50px;
+    margin-bottom: 110px;
+    box-shadow: 0px 0px 5px -1px #242424;  
+}
+
+.palladium div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.palladium section{
+    border: 1px solid #fff;
+    width: 320px;
+    height: 250px;
+    padding: 50px;
+}
+
+.palladium h3{
+    color: #fff;
+    font-size: 36px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;
+    margin: 20px 0 10px 0;
+}
+
+.palladium p{
+    color: #fff;
+    font-size: 12px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    line-height: 170%;   
+}
+
+/* TOP→サービス */
+.service{
+    width: 1200px;
+    background-color: #e9ecf4;
+    padding: 50px;
+}
+
+.service h2{
+    display: flex;
+    justify-content: center;
+    margin:80px 0 30px 0;
+}
+
+.service .summary{
+    margin-bottom: 60px;
+}
+
+.service .btns{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.service .btns a:hover{text-decoration: none; color: #242424;}
+.service .btns a:active {text-decoration: none; color: #242424;}
+
+.service .btns .box{
+    display: flex;
+    box-shadow: 0px 0px 5px -5px #242424;  
+}
+
+.service .detail{
+    width: 250px;
+    height: 300px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.service .detail h3{
+    color: #0f2c5f;
+    font-size: 20px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;  
+    margin: 50px 0 10px 0;  
+}
+
+.service .detail p{
+    color: #242424;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 170%;   
+    margin-bottom: 10px;
+}
+
+.service .detail .btn3{
+    color: #0f2c5f;
+    font-size: 40px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+    margin-left: 165px;
+}
+
+.service .ex{
+    border: 2px solid #fff;
+    background-image: url(../img/top_service3.png);
+    margin-bottom: 100px;
+}
+
+.service .ex h3{
+    color: #0f2c5f;
+    font-size: 24px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;    
+    margin: 60px 0 40px 100px; 
+}
+
+.service .ex .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.service .ex .graph{
+    margin:0 0 30px 100px;
+}
+
+.graph p{
+    color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400; 
+    margin: 23px 0;
+}
+
+.graph .gleft{
+    display: inline-block;
+    width: 90px;
+}
+
+.graph img{
+    margin-bottom: 2px;
+}
+
+.graph .gright{
+    display: inline-block;
+    margin-left: 40px;    
+}
+
+.graph .gunder{
+    color: #0f2c5f;
+    font-size: 10px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+    margin-left: 155px; 
+}
+
+.service .ex .family{
+    color: #242424;
+    font-size: 13px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 180%;   
+    margin-bottom: 35px;   
+}
+
+/* TOP→予約 */
+.reservation{
+    width: 1200px;
+    height: 735px;
+    background-image: url(../img/top_reservation1.png);    
+    padding: 100px;
+}
+
+.reservation h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px ;    
+}
+
+.reservation div{
+    width: 900px;
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+
+.reservation .box{
+    box-shadow: 0px 0px 12px -10px #242424;  
+}
+
+.reservation h3{
+    color: #0f2c5f;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    background-color: #fff;
+    width: 400px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　私たちについて
+ーーーーーーーーーーーーーーーーーー */
+/* 私たちについて→ファーストビュー */
+.aboutus_first{
+    background-image: url(../img/aboutus_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 60px #b5b7c0;
+    margin-bottom: 70px;
+}
+
+.aboutus_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.aboutus_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+/* 私たちについて→歴史 */
+.history{
+    background-image: url(../img/aboutus_history1.png);
+    width: 1200px;
+    height: 1100px;
+    padding: 100px;
+}
+
+.history h2{
+    display: flex;
+    justify-content: center;
+    margin: 90px 0 70px 0;
+}
+
+.history .box{
+    display: flex;
+}
+.craftman{
+    width: 450px;
+    margin-right: 50px;
+}
+.craft{
+    margin-bottom: 50px;
+}
+
+.history .box p{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 180%;
+    margin-top: 40px;
+}
+
+/* 私たちについて→こだわり */
+.why{
+    width: 1200px;
+    padding: 100px;
+}
+
+.why h2{
+    display: flex;
+    justify-content: center;   
+    margin-bottom: 30px; 
+}
+
+.why .summary{
+    margin-bottom: 60px;
+}
+
+.why .box{
+    display: flex;
+}
+
+.why h3{
+    color: #0f2c5f;
+    font-size: 30px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 500;    
+    margin-bottom: 20px;
+}
+
+.why .boxx{
+    width: 500px;
+    padding: 50px;
+}
+
+.why .boxx .sub{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 180%;
+    margin-bottom: 20px;
+}
+
+.why .btn_palladium{
+    color: #fff;
+    background-color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    height: 50px;
+    width: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin:0 0 40px 150px;
+    box-shadow: 0px 0px 3px -1px #242424;  
+}
+
+.why .btn_after{
+    color: #fff;
+    background-color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    height: 50px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin: 0 0 15px 130px;
+    box-shadow: 0px 0px 3px -1px #242424;  
+}
+
+.why .btn_option{
+    color: #fff;
+    background-color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    height: 50px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin:0 0 40px 130px;
+    box-shadow: 0px 0px 3px -1px #242424;  
+}
+
+.why .btn_store{
+    color: #fff;
+    background-color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    height: 50px;
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-left: 200px;
+    box-shadow: 0px 0px 3px -1px #242424;  
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　パラジウムページ
+ーーーーーーーーーーーーーーーーーー */
+/* パラジウム→ファーストビュー */
+.palladium_first{
+    background-image: url(../img/palladium_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 600px;
+    text-shadow: 0px 0px 50px #242424;
+    margin-bottom: 100px;
+}
+
+.palladium_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.palladium_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+/* パラジウム→パラジウム */
+.aboutpalladium{
+    background-image: url(../img/palladium_about1.png);
+    width: 1200px;
+    height: 998px;
+    padding: 100px;
+}
+
+.aboutpalladium h2{
+    display: flex;
+    justify-content: center;
+    margin:20px 0 90px 0;
+}
+
+.aboutpalladium div{
+    display: flex;
+}
+
+.aboutpalladium img{
+    margin-right: 100px;
+}
+
+.aboutpalladium p{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+    line-height: 180%;
+}
+
+.reason{
+    width: 1200px;
+    padding: 100px 100px 20px 100px;
+}
+
+.reason h2{
+    display: flex;
+    justify-content: center;
+    margin:10px 0 30px 0;    
+}
+
+.reason .summary{
+    margin-bottom: 60px;
+}
+
+.reason h3{
+    color: #0f2c5f;
+    font-size: 28px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;    
+    margin-bottom: 15px;
+}
+
+.reason .sub{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 450;    
+    margin-bottom: 30px;  
+    line-height: 180%;  
+}
+
+/* パラジウム→メリット */
+.merit{
+    background-image: url(../img/palladium_mrt.png);
+    width: 1200px;
+    height: 1190px;
+    padding: 10px 100px;
+    margin-bottom: 50px;
+}
+
+.merit h2{
+    display: flex;
+    justify-content: center;
+    margin:420px 0 30px 0;    
+}
+
+.merit h3{
+    color: #0f2c5f;
+    font-size: 28px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;    
+    margin-bottom: 15px;
+}
+
+.merit .sub{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 450;    
+    margin-bottom: 30px;  
+    line-height: 180%;  
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　アフターサービス
+ーーーーーーーーーーーーーーーーーー */
+/* アフターサービス→ファーストビュー */
+.afterservice_first{
+    background-image: url(../img/afterservice_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 60px #b5b7c0;
+    margin-bottom: 70px;
+}
+
+.afterservice_first .em{
+    letter-spacing: 0.06em;
+}
+
+.afterservice_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.afterservice_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　オプションサービス
+ーーーーーーーーーーーーーーーーーー */
+/* オプションサービス→ファーストビュー */
+.optionservice_first{
+    background-image: url(../img/optionservice_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 60px #b5b7c0;
+    margin-bottom: 70px;
+}
+
+.optionservice_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.optionservice_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+.optionservice_first .em{
+    letter-spacing: 0.06em;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　サービス共通
+ーーーーーーーーーーーーーーーーーー */
+/* サービス→ナビ */
+.service_nav{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+.service_nav ul{
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-right: 40px;
+    border-bottom: 1px solid #242424;
+}
+
+.service_nav li{
+    color: #242424;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    margin: 10px 20px;
+}
+
+.service_nav ul .sub{
+    color: #b5b7c0;
+}
+
+/* サービス→サービス一覧 */
+.why .afterservicebox{
+    width: 500px;
+    padding: 30px;
+}
+
+.why .afterservicebox .sub{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 180%;
+    margin-bottom: 150px;
+}
+
+.why .btn{
+    color: #fff;
+    background-color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    height: 50px;
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-left: 360px;
+    box-shadow: 0px 0px 3px -1px #242424;      
+}
+
+/* サービス→１０年プラン */
+.under_service{
+    width: 1200px;
+    padding: 50px;
+}
+
+.under_service .ex{
+    border: 2px solid #b0c7db;
+    background-image: url(../img/service_10th.png);
+    margin-bottom: 100px;
+}
+
+.under_service .ex h3{
+    color: #0f2c5f;
+    font-size: 24px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;    
+    margin: 60px 0 40px 100px; 
+}
+
+.under_service .ex .box{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.under_service .ex .graph{
+    margin:0 0 30px 100px;
+}
+
+.under_service .ex .family{
+    color: #242424;
+    font-size: 13px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 180%;   
+    margin-bottom: 35px;   
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　商品一覧（婚約指輪）
+ーーーーーーーーーーーーーーーーーー */
+/* 婚約指輪のファーストビュー */
+.engagement_first{
+    background-image: url(../img/engagement_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 20px #242424;
+    margin-bottom: 70px;
+}
+
+.engagement_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.engagement_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　商品一覧（結婚指輪）
+ーーーーーーーーーーーーーーーーーー */
+/* 結婚指輪のファーストビュー */
+.marriage_first{
+    background-image: url(../img/marriage_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 30px #242424;
+    margin-bottom: 70px;
+}
+
+.marriage_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.marriage_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　商品一覧共通
+ーーーーーーーーーーーーーーーーーー */
+/* 商品一覧→商品一覧 */
+.ringlist{
+    display: flex;
+    padding: 0 50px;
+    margin-top: 50px;
+    width: 1200px;
+}
+
+.ringlist .choose{
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.ringlist h2{
+    margin-bottom: 30px;
+}
+
+.ringlist .choose div{
+    width: 260px;
+    border-top: 1px solid #b5b7c0;
+    padding: 20px 0;
+}
+
+.ringlist .choose .underdiv{
+    border-bottom: 1px solid #b5b7c0;
+    margin-bottom: 40px;
+}
+
+.ringlist h3{
+    color: #0f2c5f;
+    font-size: 24px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500; 
+    margin-bottom: 20px;
+}
+
+.ringlist ul{
+    list-style-type: none;
+}
+
+.ringlist li{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400; 
+    margin: 10px 0;
+}
+
+.ringlist p{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+.ringlist .total{
+    color: #0f2c5f;
+    font-size: 24px;
+}
+
+.ringlist .btn{
+    color: #fff;
+    background-color: #0f2c5f;
+    font-size: 16px;
+    font-weight: 500;
+    height: 50px;
+    width: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+    margin-top: 20px;
+    box-shadow: 0px 0px 3px -1px #242424;      
+}
+
+.ringlist .item .box{
+    display: flex;
+    gap: 50px;
+}
+
+.ringlist .box div{
+    height: 350px;
+}
+
+.ringlist h4{
+    color: #242424;
+    font-size: 24px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    margin: 15px 0 5px 5px;
+}
+
+.ringlist .item p{
+    color: #555;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+/* 商品一覧→戻る */
+.back{
+    padding: 30px 100px;
+}
+
+.back p{
+    color: #242424; 
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　指輪商品ページ（ルミノ）
+ーーーーーーーーーーーーーーーーーー */
+/* ルミノ→ルミノ */
+.lumino{
+    display: flex;
+    padding: 50px 100px;
+    margin-bottom: 150px;
+    width: 1200px;
+}
+
+.lumino .image{
+    margin-right: 100px;
+}
+
+.lumino .image div{
+    display: flex;
+    margin-top: 50px;
+    gap: 50px;
+}
+.lumino h2{
+    margin-bottom: 30px;
+}
+.lumino .name{
+    font-size: 24px;    
+}
+
+.lumino .sub{
+    color: #242424;
+    font-size: 24px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;   
+    margin-bottom: 10px;  
+}
+
+.lumino .subb{
+    margin-bottom: 60px;
+}
+
+.lumino p{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 180%;
+    margin: 10px 0;
+}
+
+.lumino .info{
+    color: #0f2c5f;
+    width: 100px;
+    display: inline-block;
+}
+
+.lumino .btn1{
+    color: #fff;
+    background-color: #0f2c5f;
+    width: 400px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    margin:60px 0 30px 0; 
+    box-shadow: 0px 0px 3px -1px #242424;
+}
+
+.lumino .btn2{
+    color: #0f2c5f;
+    border: 1px solid #0f2c5f;
+    width: 400px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    box-shadow: 0px 0px 3px -1px #242424;
+}
+
+.lumino .pd a:link{text-decoration: underline; color: #242424;}
+.lumino .pd a:visited {text-decoration: underline; color: #242424;}
+.lumino .pd a:hover{text-decoration: underline; color: #0f2c5f;}
+.lumino .pd a:active {text-decoration: underline; color: #0f2c5f;}
+
+/* ルミノ→おすすめ */
+.recommend{
+    background-color: #e9ecf4;
+    width: 1200px;
+    padding: 100px;
+}
+
+.recommend .sub{
+    color: #0f2c5f;
+    margin-bottom: 70px;
+}
+
+.recommend .box{
+    display: flex;
+    gap: 70px;
+}
+
+.recommend .box div{
+    height: 350px;
+}
+
+.recommend h4{
+    color: #242424;
+    font-size: 24px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 400;
+    margin: 15px 0 5px 5px;
+}
+
+.recommend div p{
+    color: #555;
+    font-size: 14px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    margin-left: 5px;
+}
+
+.recommend .more{
+    color: #0f2c5f;
+    font-size: 50px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;   
+    margin-top: 80px;
+}
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　店舗案内
+ーーーーーーーーーーーーーーーーーー */
+/* 店舗案内→ファーストビュー */
+.store_first{
+    background-image: url(../img/store_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 60px #242424;
+    margin-bottom: 70px;
+}
+
+.store_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.store_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+/* 店舗案内→店舗案内 */
+.storeinfo{
+    width: 1200px;
+    padding: 30px 100px 100px 100px;
+}
+
+.storeinfo h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 90px;
+}
+
+.storeinfo .box{
+    display: flex;
+}
+
+.storeinfo img{
+    margin:0 100px 100px 0;
+}
+
+.storeinfo iframe{
+    margin:0 100px 100px 0;
+}
+
+.storeinfo h3{
+    color: #0f2c5f;
+    font-size: 28px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500; 
+    margin: 30px 0;
+}
+
+.storeinfo p{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+    line-height: 180%;
+    margin: 20px 0;
+}
+
+.storeinfo .info{
+    color: #0f2c5f;
+    width: 120px;
+    display: inline-block;
+}
+
+.storeinfo .under{
+    margin-left: 120px;
+}
+
+.storeinfo .day{
+    width: 80px;
+    display: inline-block;
+}
+
+/* 店舗案内→流れ */
+.frow{
+    width: 1200px;
+    background-color:#e9ecf4 ;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.frow h2{
+    margin-bottom: 70px;   
+}
+
+.frow .box{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    width: 1000px;
+}
+
+.frow .box section{
+    width: 300px;
+}
+
+.frow .box h3{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500; 
+    display: flex;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.frow .box p{
+    color: #242424;
+    font-size: 15px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;    
+    line-height: 180%;    
+}
+
+/* 店舗案内→よくあるご質問 */
+.f_q{
+    width: 1200px;
+    padding: 150px;
+}
+
+.f_q h2{
+    display: flex;
+    justify-content: center;
+}
+
+.f_q .sub{
+    color: #0f2c5f;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    display: flex;
+    justify-content: center;    
+    margin-bottom: 60px;
+}
+
+.f_q div p{
+    width: 900px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    border-top: 3px solid #b5b7c0;
+    color: #242424;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    margin-left: 2px;
+}
+
+.f_q .underp{
+    border-bottom:3px solid #b5b7c0 ;
+
+}
+
+.f_q .query{
+    width: 880px;
+    display: inline-block;
+}
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　　来店予約
+ーーーーーーーーーーーーーーーーーー */
+/* 来店予約→ファーストビュー */
+.reservation_first{
+    background-image: url(../img/reservation_first.png);
+    width: 1200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0px 0px 60px #242424;
+    margin-bottom: 70px;
+}
+
+.reservation_first h1{
+    color: #fff;
+    font-size: 48px;
+    font-family: "Shippori Mincho", serif;
+    font-weight: 600;
+}
+
+.reservation_first .em{
+    letter-spacing: 0.06em;
+}
+
+.reservation_first p{
+    color: #fff;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+}
+
+/* 来店予約→現在地 */
+.formtop{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.formtop div{
+    display: flex;
+    justify-content: space-between;
+    width: 530px;
+}
+
+.formtop p{
+    color: #b5b7c0;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400; 
+    margin-top: 20px;
+}
+
+.formtop .now{
+    color: #242424;    
+}
+
+/* 来店予約→入力フォーム */
+.form{
+    background-color: #e9ecf4;
+    padding: 50px 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+}
+
+.form h2{
+    margin-bottom: 60px;
+}
+
+.form div{
+    width: 900px;
+    padding: 30px 0;
+    border-top: 3px solid #b5b7c0;
+}
+
+.form .underdiv{
+    border-bottom: 3px solid #b5b7c0;    
+    margin-bottom: 50px;
+}
+
+.form .title{
+    color: #242424;
+    font-size: 20px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    margin-bottom: 20px;  
+}
+
+.form .mondatory{
+    color: #bd1b1b;
+}
+
+.form .optional{
+    color: #b5b7c0;
+}
+
+.form .box{
+    border: 1px solid #b5b7c0;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding-left: 50px;
+    color: #b5b7c0;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;   
+}
+
+.form .boxx{
+    border: 1px solid #b5b7c0;
+    background-color: #fff;
+    height: 180px;
+    padding:30px 0 0 50px;
+    color: #b5b7c0;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;   
+    margin-top: 20px;
+}
+
+.form ul{
+    list-style-type: none;
+}
+
+.form li{
+    color: #242424;
+    font-size: 16px;
+    margin: 10px 0;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400; 
+    line-height: 170%;
+}
+
+.form .sub{
+    color: #242424;
+    font-size: 18px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;  
+    margin-bottom: 50px;      
+}
+.form .btn{
+    font-size: 20px;
+    color: #fff;
+    background-color: #0f2c5f;
+    width: 900px;
+    height: 80px;
+    box-shadow: 0px 0px 5px -1px #242424;   
+    margin-bottom: 70px;   
+}
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　プライバシーポリシー
+ーーーーーーーーーーーーーーーーーー */
+/* プライバシーポリシー→プライバシーポリシー */
+.policy{
+    width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px;
+}
+
+.policy .sub{
+    color: #0f2c5f;
+    margin-bottom: 30px;  
+}
+
+.policy .summary{
+    margin-bottom: 50px;  
+}
+
+.policy section{
+    width: 1000px;
+    border-top: 3px solid #b5b7c0;
+    padding: 50px 0;
+}
+
+.policy .undersec{
+    border-bottom: 3px solid #b5b7c0;    
+    margin-bottom: 70px;
+}
+
+.policy h3{
+    color: #0f2c5f;
+    font-size: 28px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;      
+    margin-bottom: 20px;
+}
+
+.policy .info{
+    width: 90px;
+    display: inline-block;
+}
+
+.policy ol li::marker{
+    color: #0f2c5f;
+    font-weight: 700;
+}
+
+.policy p{
+    color: #242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 170%;       
+}
+
+
+.policy ol{
+    padding-left: 30px;
+}
+
+.policy li{
+    color:#242424;
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    line-height: 170%;  
+}

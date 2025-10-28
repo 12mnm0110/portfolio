@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>PALLATENA_来店予約フォーム</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- Shippori Mincho -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Noto Sans JP -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+
+<!-- 予約フォームのHTML -->
+
+
+<body>
+<!-- 下層ページ→ポートフォリオに戻る -->
+<a href="../../ring/index.html" class="back-btn">
+    <img src="../../img/back.png" alt="ポートフォリオに戻る" width="100" height="400">
+</a>
+
+<!-- ヘッダー -->
+<header>
+    <a href="../index.html">
+        <img src="../img/header_logo.png" alt="PALLATENAのロゴ" width="125" height="68">
+    </a>
+    <nav>
+        <ul>
+            <a href="../EngagementRing/index.html"><li>婚約指輪</li></a>
+            <a href="../WeddingRing/index.html"><li>結婚指輪</li></a>
+            <a href="../AboutUs/index.html"><li>私たちについて</li></a>
+            <a href="../Store/index.html"><li>店舗のご案内</li></a>
+        </ul>
+    </nav>
+    <div>
+        <a href="../Reservation/index.html"><p class="btn">来店予約</p></a>
+    </div>
+</header>
+
+<!-- ファーストビュー -->
+<main>
+    <section class="reservation_first">
+        <h1>Rese<span class="em">r</span>vation</h1>
+        <p>来店予約フォーム</p>
+    </section>
+
+<!-- 現在地 -->
+    <div class="formtop">
+        <img src="../img/reservation_nav.png" alt=" " width="425" height="18">
+        <div>
+            <p class="now">入力フォーム</p>
+            <p>入力内容確認</p>
+            <p>申し込み完了</p>
+        </div>
+    </div>
+
+<!-- 入力フォーム -->
+    <section class="form">
+        <h2>入力フォーム</h2>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>ご来店予定日</p>
+            <p class="box">---</p>
+        </div>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>ご来店希望時間</p>
+            <p class="box">---</p>
+        </div>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>名字(カタカナ)</p>
+            <p class="box">（例）ヤマダ</p>
+        </div>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>名前(カタカナ)</p>
+            <p class="box">（例）タロウ</p>
+        </div>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>電話番号</p>
+            <p class="box">（例）012-345-6789</p>
+        </div>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>メールアドレス</p>
+            <p class="box">（例）mail@pallatena.com</p>
+        </div>
+        <div>
+            <p class="title"><span class="mondatory">※必須　</span>ご来店される方</p>
+            <ul>
+                <li><label><input type="checkbox">お相手の方とともに</label></li>
+                <li><label><input type="checkbox">おひとり(男性)</label></li>
+                <li><label><input type="checkbox">おひとり(女性)</label></li>
+                <li><label><input type="checkbox">おひとり(その他)</label></li>
+                <li><label><input type="checkbox">おふたり以上(ご友人やご家族同席)</label></li>
+            </ul>
+        </div>
+        <div>
+            <p class="title"><span class="optional">※任意　</span>ご検討されている商品</p>
+            <ul>
+                <li><label><input type="checkbox">婚約指輪</label></li>
+                <li><label><input type="checkbox">結婚指輪</label></li>
+            </ul>
+        </div>
+        <div>
+            <p class="title"><span class="optional">※任意　</span>ご来店回数</p>
+            <ul>
+                <li><label><input type="radio" name="visit">初めて</label></li>
+                <li><label><input type="radio" name="visit">2回目以降</label></li>
+                <li><label><input type="radio" name="visit">お受け取り</label></li>
+                <li><label><input type="radio" name="visit">修理依頼・相談</label></li>
+            </ul>
+        </div>
+        <div class="underdiv">
+            <p class="title"><span class="optional">※任意　</span>ご要望やご質問</p>
+            <p class="boxx">希望の商品やご相談がございましたらご記入ください。</p>
+        </div>
+        <p class="sub">※個人情報の取り扱いについては<a href="../PrivacyPolicy/index.html">プライバシーポリシー</a>をご確認ください。</p>
+        <a href="#"><p class="btn">ご予約の確認  ></p></a>
+    </section>
+
+<!-- 下ナビ -->
+    <div class="undernav">
+        <p><a href="../index.html" class="was">TOP</a>　>　<a href="index.html" class="now">来店のご予約</a></p>
+    </div>
+</main>
+
+<!-- フッター -->
+<footer>
+    <div>
+        <a href="../index.html"><img src="../img/footer_logo.png" alt="PALLATENAのロゴ" width="129" height="71"></a>
+        <p class="address1">〒113-0033
+        <br>東京都文京区本郷2丁目××××</p>
+        <p class="address2">Tel 0120-××××-××××</p>
+        <p class="address2">Mail ××××@Pallatena.com</p>
+    </div>
+    <div class="box">
+        <div class="btns">
+            <a href="#"><img src="../img/footer_inst.png" alt="Instagramロゴ" width="27" height="27"></a>
+            <a href="#"><img src="../img/footer_x.png" alt="Xロゴ" width="27" height="27"></a>
+            <a href="#"><img src="../img/footer_youtube.png" alt="youtubeロゴ" width="31" height="25"></a>
+            <a href="../Reservation/index.html"><p class="btn">来店予約  ></p></a>
+        </div>
+        <ul>
+            <a href="../AboutUs/index.html"><li>私たちについて</li></a>
+            <a href="../EngagementRing/index.html"><li>婚約指輪</li></a>
+            <a href="../WeddingRing/index.html"><li>結婚指輪</li></a>
+            <a href="../Store/index.html"><li>店舗案内</li></a>
+            <a href="../Palladium/index.html"><li>パラジウムについて</li></a>
+        </ul>
+        <ul>
+            <a href="../AfterService/index.html"><li>アフターサービス</li></a>
+            <a href="../OptionService/index.html"><li>オプションサービス</li></a>
+            <a href="../PrivacyPolicy/index.html"><li>プライバシーポリシー</li></a>
+        </ul>
+        <p class="copyright">＠2025 PALLATENA</p>
+    </div>
+</footer>
+
+</body>
+</html>
