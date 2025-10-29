@@ -38,8 +38,14 @@ $(function(){
 <!-- 下層ページ→ヘッダー -->
 <header>
     <a href="../index.html"><img src="../img/header_logo.png" alt="ポートフォリオロゴ" width="115" height="38"></a>
+    <!-- ハンバーガー用 -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>   
     <nav>
-        <ul>
+        <ul class="header-menu">
             <a href="../index.html"><li>トップ</li></a>
             <a href="../index.html#works"><li>デザインしたもの</li></a>
             <a href="../about/index.html"><li>わたしについて</li></a>
@@ -111,6 +117,18 @@ $(function(){
     <p class="copy">＠2025MINAMIKATO</p>
 </footer>
 
+
+
+<!-- ハンバーガー用JS -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+</script>
 
 <!-- ふわっとするためのJS -->
 <script>

@@ -5,8 +5,9 @@
 /* div, section{
     border: 1px solid #000;
 } */
+
 /* ーーーーーーーーーーーーーーーーーー
-　　　　ポートフォリオに戻る
+　　　　　　トップに戻る
 ーーーーーーーーーーーーーーーーーー */
 .back-btn {
     position: fixed;   
@@ -35,6 +36,11 @@ a:hover{text-decoration: none; color: #373737;}
 a:active {text-decoration: none; color: #373737;}
 html{
     scroll-behavior: smooth;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 h2{
     color: #373737;
@@ -81,7 +87,7 @@ img{
 } 
 li{
     color: #7CABB1;
-    font-size: 20px;
+    font-size: 18px;
     font-family: "Zen Kaku Gothic New", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -133,26 +139,59 @@ li{
 　　　　　　全ページ共通
 ーーーーーーーーーーーーーーーーーー */
 /* ヘッダー */
-header{
-    width: 100%;
-    height: 70px;
+header {
+    width: 90%;
+    height: 60px;
     background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 5%;
     position: fixed;
-    top: 0;
+    top: 10px;
+    border-radius: 30px;
     z-index: 1000;
+    box-shadow: 0px 0px 15px -10px #777777;
 }
 
-header ul{
+header ul {
     display: flex;
     gap: 50px;
+    list-style: none;
 }
 
-main{
-    margin-top: 70px;
+header li:hover{
+    color: #969696;
+}
+
+.hamburger {
+    display: none; 
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background-color: #67A6B1;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
 }
 
 
@@ -191,14 +230,24 @@ footer .copy{
 ーーーーーーーーーーーーーーーーーー */
 /* TOP→ファーストビュー */
 .first .hero{
-    width: 100%;
+    width: 100vw;
+    height: 96vh;    
+    overflow: hidden;
     position: relative;
+}
+
+.first .hero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 65% center;
+    display: block;
 }
 
 .first .logo{
     width: 35%;
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 9%;
     z-index: 1;
 }
@@ -208,6 +257,7 @@ footer .copy{
     background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
     background-size: 60px 60px;
     background-color: #fff;
+    margin-bottom: 0;
 }
 
 .works .w1200{
@@ -358,9 +408,305 @@ footer .copy{
 ーーーーーーーーーーーーーーーーーー */
 /* 作品ページ→概要 */
 .summary{
+    width: 100%;
     background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
     background-size: 60px 60px;
     background-color: #fff;
+}
+
+.summary .w1200{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 170px 5%;
+}
+
+.summary .time{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.summary .outline{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.summary .outline a{
+    width: 50%;
+    transition: transform 0.6s ease-in-out;
+}
+
+.summary .outline a:hover {
+  transform: scale(1.04);
+}
+
+
+.summary .outline div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.summary .outline h4{
+    margin-bottom: -15px;
+}
+
+.summary h2{
+    margin-bottom: -40px;
+}
+
+.summary .fw500{
+    font-weight: 500;    
+}
+
+
+/* 作品ページ→思考プロセス */
+.paper .w1200{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.paper .box{
+    width: 900px;
+    background-color: #fff;
+    border: 1px solid #373737;
+    border-radius: 50px;
+    padding-bottom: 50px;
+}
+
+    /* スライダー */
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  overflow: visible;
+}
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+    /* ページネーション（●のやつ） */
+.swiper-pagination {
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.swiper-pagination-bullet {
+  background-color: #373737 !important; /* 丸を赤に */
+  opacity: 0.6;
+}
+.swiper-pagination-bullet-active {
+  background-color: #373737 !important; /* 選択中も赤 */
+  opacity: 1;
+}
+    /* 矢印ボタン */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  z-index: 10;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #373737 !important;
+  font-size: 20px !important; /* 少し見やすく */
+}
+.swiper-button-prev {
+  left: -70px;
+}
+.swiper-button-next {
+  right: -70px;
+}
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  opacity: 0.8;
+}
+
+
+/* 作品ページ→トップデザイン */
+.design{
+    background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-color: #fff;
+}
+
+.design .w1200{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100px 5%;
+}
+
+.design img{
+    margin-bottom: 100px;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　どんぶらページ
+ーーーーーーーーーーーーーーーーーー */
+/* どんぶら→概要 */
+.donbura .frame{
+    background-color: #43614F;    
+}
+
+.donbura h4{
+    color: #73AF4F;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　指輪ページ
+ーーーーーーーーーーーーーーーーーー */
+/* 指輪→概要 */
+.pallatena .frame{
+    background-color: #292D4B;    
+}
+
+.pallatena h4{
+    color: #67A6B1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+
+
+
+　　　　　　スマホサイズ
+
+
+
+ーーーーーーーーーーーーーーーーーー */
+
+@media only screen and (width<750px){
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　　共通設定
+ーーーーーーーーーーーーーーーーーー */
+h2{
+    font-size: 35px;
+}
+h3{
+    font-size: 25px;
+}
+h4{
+    font-size: 20px;
+}
+p{
+    font-size: 15px;
+}
+li{
+    font-size: 15px;
+}
+
+
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　全ページ共通
+ーーーーーーーーーーーーーーーーーー */
+/* ヘッダー */
+.hamburger {
+    display: flex;
+}
+nav {
+    position: absolute;
+    top: 70px;
+    right: 5%;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px -10px #777777;
+    width: 200px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+}
+nav.active {
+    display: flex;
+}
+.header-menu {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+.header-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　トップページ
+ーーーーーーーーーーーーーーーーーー */
+/* TOP→ファーストビュー */
+.first .logo{
+    width: 50%;
+}
+
+
+/* TOP→デザインしたもの */
+.works .left{
+    flex-direction: column;
+    gap: 0;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+.works .right{
+    flex-direction: column;
+    gap: 0;
+    overflow: visible;
+    margin-bottom: 50px;
+}
+.works .left img , .works .right img{
+    width: 100%;
+}
+.works .box{
+    width: 100%;
+    padding: 0 5%;
+}
+
+
+/* TOP→わたしについて */
+.about .box{
+    flex-direction: column;
+}
+.about .box img{
+    width: 100%;
+}
+
+
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　　作品ページ
+ーーーーーーーーーーーーーーーーーー */
+/* 作品ページ→概要 */
+.summary{
+    background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
+    background-size: 60px 60px;
+    background-color: #fff;
+    margin-bottom: 0;
 }
 
 .summary .w1200{
@@ -525,6 +871,4 @@ footer .copy{
 .pallatena h4{
     color: #67A6B1;
 }
-
-
-
+}
