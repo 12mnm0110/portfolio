@@ -302,6 +302,7 @@ footer .copy{
     color: #9B9B9B;
 }
 
+/* どんぶら */
 .works .donbura {
     background-color: #73AF4F;
     color: #fff;
@@ -310,8 +311,20 @@ footer .copy{
     padding: 5px 20px;
     border-radius: 25px;
 }
+
+/* 指輪 */
 .works .pallatena {
     background-color: #67A6B1;
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+/* YOI */
+.works .yoi {
+    background-color: #D68996;
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -580,6 +593,17 @@ footer .copy{
     color: #67A6B1;
 }
 
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　YOIページ
+ーーーーーーーーーーーーーーーーーー */
+/* YOI→概要 */
+.yoi .frame{
+    background-color: #855059;    
+}
+
+.yoi h4{
+    color: #D68996;
+}
 
 
 

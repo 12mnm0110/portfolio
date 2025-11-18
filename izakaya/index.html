@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>指輪屋さん｜加藤ポートフォリオ</title>
+<link href="../css/reset.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- グーグル除け -->
+<meta name="robots" content="noindex,nofollow">
+
+<!-- フォント（Zen Kaku Gothic New） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+<!--jQuery本体-->
+<script src="../js/jquery-1.11.2.min.js"></script>
+
+<!-- スライダー用JSとCSS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body>
+<!-- 下層ページ→トップに戻る -->
+<a href="index.html" class="back-btn">
+    <img src="../img/top_back.png" alt="トップに戻る" width="160" height="214">
+</a>
+
+<!-- 下層ページ→ヘッダー -->
+<header>
+    <a href="../index.html"><img src="../img/header_logo.png" alt="ポートフォリオロゴ" width="115" height="38"></a>
+    <!-- ハンバーガー用 -->
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>   
+    <nav>
+        <ul class="header-menu">
+            <a href="../index.html"><li>トップ</li></a>
+            <a href="../index.html#works"><li>デザインしたもの</li></a>
+            <a href="../about/index.html"><li>わたしについて</li></a>
+        </ul>
+    </nav>
+</header>
+
+<!-- 居酒屋→概要 -->
+<main class="yoi">
+    <section class="summary">
+        <div class="w1200">
+            <h2>女子大生向け映え居酒屋</h2>
+            <p>7ページのサイト制作</p>
+            <div class="time">
+                <h4>制作時間</h4>
+                <p class="frame">企画</p>
+                <p class="fw500">8h</p>
+                <p class="frame">デザイン</p>
+                <p class="fw500">24h</p>
+                <p class="frame">コーディング</p>
+                <p class="fw500">24h</p>
+            </div>
+            <div class="outline">
+                <a href="../yoi/index.html"><img src="../img/yoi.png" alt="" width="550" height="412"></a>
+                <div>
+                    <h4>コンバージョン</h4>
+                    <p>ブランドの世界観浸透と来店意欲の最大化</p>
+                    <h4>ペルソナ</h4>
+                    <p>20-22の女性(女子大生)</p>
+                    <h4>使用ツール</h4>
+                    <p>Figma／Visual Studio Code</p>
+                    <h4>コンセプト</h4> 
+                    <p>#ポップさ #非日常 #新しさ</p>                   
+                </div>
+            </div>
+            <a href="../yoi/index.html"><p class="btn">サイトをみる&nbsp;+</p></a>
+        </div>
+    </section>
+
+<!-- 居酒屋→思考プロセス -->
+    <!-- <section class="paper">
+        <div class="w1200">
+            <h2>思考プロセス</h2>
+            <div class="box">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../img/yoi_1.png" alt="居酒屋1ページ目" width="800" height="565"></div>
+                        <div class="swiper-slide"><img src="../img/yoi_2.png" alt="居酒屋2ページ目" width="800" height="565"></div>
+                        <div class="swiper-slide"><img src="../img/yoi_3.png" alt="居酒屋3ページ目" width="800" height="565"></div>
+                    </div> -->
+                    
+                    <!-- ページネーション（●のやつ） -->
+
+                    <!-- <div class="swiper-pagination"></div> -->
+
+                    <!-- 矢印ボタン -->
+
+                    <!-- <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+<!-- 居酒屋→トップデザイン -->
+    <section class="design">
+        <div class="w1200">
+            <h2>トップページデザイン</h2>
+            <img src="../img/yoi_top.png" alt="YOIのトップページ" width="850" height="4010">
+            <a href="../index.html#works"><p class="btn">一覧へもどる</p></a>
+        </div>
+    </section>
+</main>
+
+<!-- 下層ページ→フッター -->
+<footer>
+    <p class="thanks">この度は貴重なお時間をいただき、誠にありがとうございました。
+    <br>これからのご縁につながりましたら幸いです!!</p>
+    <p class="copy">＠2025MINAMIKATO</p>
+</footer>
+
+
+
+<!-- ハンバーガー用JS -->
+<script>
+  const hamburger = document.querySelector('.hamburger');
+  const nav = document.querySelector('nav');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    nav.classList.toggle('active');
+  });
+</script>
+
+<!-- スライダーのためのコード -->
+<script>
+    const swiper = new Swiper('.swiper', {
+    slidesPerView: 1,
+    centeredSlides: false,
+    spaceBetween: 0,
+    loop: true, // スライドが途切れずループ
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+    });
+</script>
+
+<!-- ふわっとするためのJS -->
+<script>
+  const allElements = document.querySelectorAll('main *');
+  allElements.forEach(el => el.setAttribute('data-fade', ''));
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target); // 一度表示されたら監視解除
+      }
+    });
+  });
+  allElements.forEach(el => observer.observe(el));
+</script>
+
+</body>
+
+</html>
