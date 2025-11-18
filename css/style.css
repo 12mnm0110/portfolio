@@ -258,6 +258,7 @@ footer .copy{
     background-size: 60px 60px;
     background-color: #fff;
     margin-bottom: 0;
+    width: 100vw;
 }
 
 .works .w1200{
@@ -353,6 +354,7 @@ footer .copy{
 
 /* わたしについて→つよみ */
 .strong{
+    width: 100vw;
     background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
     background-size: 60px 60px;
     background-color: #fff;
@@ -408,7 +410,7 @@ footer .copy{
 ーーーーーーーーーーーーーーーーーー */
 /* 作品ページ→概要 */
 .summary{
-    width: 100%;
+    width: 100vw;
     background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
     background-size: 60px 60px;
     background-color: #fff;
@@ -537,6 +539,8 @@ footer .copy{
     background-image: linear-gradient(#EDEDED 1px, transparent 1px), linear-gradient(90deg, #EDEDED 1px, transparent 1px);
     background-size: 60px 60px;
     background-color: #fff;
+    margin-bottom: 0;
+    padding-bottom: 100px;
 }
 
 .design .w1200{
