@@ -868,28 +868,5 @@ nav.active {
 }
 
 
-/* ーーーーーーーーーーーーーーーーーー
-　　　　　　どんぶらページ
-ーーーーーーーーーーーーーーーーーー */
-/* どんぶら→概要 */
-.donbura .frame{
-    background-color: #43614F;    
-}
 
-.donbura h4{
-    color: #73AF4F;
-}
-
-
-/* ーーーーーーーーーーーーーーーーーー
-　　　　　　指輪ページ
-ーーーーーーーーーーーーーーーーーー */
-/* 指輪→概要 */
-.pallatena .frame{
-    background-color: #292D4B;    
-}
-
-.pallatena h4{
-    color: #67A6B1;
-}
 }
