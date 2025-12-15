@@ -1,0 +1,311 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>株式会社加山組</title>
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+
+<!-- ファビコン -->
+<link rel="icon" href="img/kayamaicon.png">
+
+<!-- Googleフォント（Noto Sans JapaneseとSchibsted Grotesk） -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Schibsted+Grotesk:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<!-- ビューポート -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--jQuery本体-->
+<script src="js/jquery-1.11.2.min.js"></script>
+
+<!--ready関数-->
+<script>
+$(function(){
+
+});
+</script>
+
+</head>
+
+<body id="top">
+<!-- トップ→ポートフォリオに戻る -->
+<a href="../kensetsu/index.html" class="back-btn">
+    <img src="../img/back.png" alt="ポートフォリオに戻る" width="100" height="400">
+</a>
+<!-- トップ→ヘッダー -->
+<header>
+    <a href="index.html" class="logo">
+        <img src="img/header_logo.png" alt="加山組のロゴ" width="120" height="">
+    </a>
+    <!-- ハンバーガーここから -->
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger">
+        <span></span><span></span><span></span>
+    </label>
+    <!-- ハンバーガーここまで -->
+    <div class="header-right">
+        <nav>
+            <ul class="nav">
+                <li class="active"><a href="index.html">トップ</a></li>
+                <li><a href="about/index.html">加山組について</a></li>
+                <li><a href="business/index.html">事業内容</a></li>
+                <li><a href="index.html#works">施工実績</a></li>
+                <li><a href="index.html#news">お知らせ</a></li>
+                <span class="line"></span>
+            </ul>
+        </nav>
+        <a href="recruit/index.html"><p class="btn1"><span class="btn_text">採用情報</span></p></a>
+        <a href="contact/index.html"><p class="btn2"><span class="btn_text">お問い合わせ</span></p></a>   
+    </div> 
+</header>
+
+<!-- トップに戻る -->
+<main class="top">
+    <a href="#top" class="pagetop" id="pagetop">
+        <div class="circle-text" id="circleText">PAGE TOP-PAGE TOP-PAGE TOP-PAGE TOP-</div>
+        <div class="triangle"></div>
+    </a>
+    
+<!-- トップ→ファーストビュー -->
+    <section class="hero">
+        <div class="hero-bg bg1"></div>
+        <div class="hero-bg bg2"></div>
+        <h1>建築で、<br>生きていく。</h1>
+    </section>
+
+
+<!-- トップ→アバウト -->
+    <section class="about"><div class="w1200" id="about">
+        <div class="left">
+            <h2>ABOUT</h2>
+            <p class="sub">加山組の想い</p>
+            <a href="about/index.html" class="btn"><span class="btn_text">詳しく見る　＋</span></a>
+        </div>
+        <div class="right">
+            <p>私たち株式会社加山組は、建物を作り・支え・動かす、<span class="bold">総合建設会社</span>です。創業80年、全国6拠点から現場を支え、技術を磨いてきました。「建築で生きていく」覚悟とともに、未来を築き続けます。</p>
+        </div>
+    </div></section>
+
+<!-- トップ→ビジネス -->
+    <section class="business">
+        <img src="img/top_busi_ue.png" class="ue" alt="" width="" height="">
+        <div class="w1200" id="business">
+            <div class="title">
+                <div class="left">
+                    <h2>BUSINESS</h2>
+                    <p class="sub">事業内容</p>
+                </div>
+                <div class="right">
+                    <p>建物を作り・支え・動かすために、建設・土木・設備の3領域で、暮らしと産業を支える総合的な施工サービスを提供しています。</p>
+                    <a href="business/index.html" class="btn"><span class="btn_text">詳しく見る　＋</span></a>
+                </div>
+            </div>
+            <div class="box">
+                <a href="business/index.html#kensetsu">
+                    <div><img src="img/top_busi1.png" alt="建設事業を行っている" width="330" height="250"></div>
+                    <h3>建設事業</h3>
+                    <p>用途に合わせた最適な構造と品質で、オフィス・工場・商業施設など幅広い建築物を確実に施工します。</p>
+                </a>
+                <a href="business/index.html#doboku" class="second">
+                    <div><img src="img/top_busi2.png" alt="土木事業を行っている" width="330" height="250"></div>
+                    <h3>土木事業</h3>
+                    <p>道路・造成・基礎など、地域の暮らしを支えるインフラ整備を、高い技術力と安全管理で丁寧に行います。</p>
+                </a>
+                <a href="business/index.html#setsubi" class="third">
+                    <div><img src="img/top_busi3.png" alt="設備事業を行っている" width="330" height="250"></div>
+                    <h3>設備事業</h3>
+                    <p>電気・空調・衛生設備を一貫して施工し、建物の快適性と機能性を支えるインフラを高品質で提供します。</p>
+                </a>
+            </div>
+        </div>
+        <img src="img/top_busi_sita.png" class="sita" alt="" width="" height="">
+    </section>
+
+<!-- トップ→ワークス -->
+    <section class="works"><div class="w1200" id="works">
+        <h2>WORKS</h2>
+        <p class="sub">施工実績</p>
+        <div class="what">
+            <a href="works_a/index.html">
+                <div class="imgbox"><img src="img/top_works1.png" alt="XYZオフィスビル 新築工事" width="420" height="300"></div>
+                <div>
+                    <p class="add">大阪府大阪市</p>
+                    <p class="add">建設工事</p>
+                    <p class="add">設備工事</p>                    
+                </div>
+                <h3>XYZオフィスビル 新築工事</h3>
+            </a>
+            <a href="works_a/index.html">
+                <div class="imgbox"><img src="img/top_works2.png" alt="サクラモール 改修工事" width="420" height="300"></div>
+                <div>
+                    <p class="add">広島県福山市</p>
+                    <p class="add">建設工事</p>
+                    <p class="add">設備工事</p>                        
+                </div>
+                <h3>サクラモール 改修工事</h3>
+            </a>
+        </div>
+        <div class="what">
+            <a href="works_a/index.html">
+                <div class="imgbox"><img src="img/top_works3.png" alt="北陸自動車道 道路改良工事" width="420" height="300"></div>
+                <div>
+                    <p class="add">富山県富山市</p>
+                    <p class="add">土木工事</p>                     
+                </div>
+                <h3>北陸自動車道 道路改良工事</h3>
+            </a>
+            <a href="works_a/index.html">
+                <div class="imgbox"><img src="img/top_works4.png" alt="ABC工業 新工場建設" width="420" height="300"></div>
+                <div>
+                    <p class="add">愛知県岡崎市</p>
+                    <p class="add">建設工事</p>
+                    <p class="add">設備工事</p>                       
+                </div>
+                <h3>ABC工業 新工場建設</h3>
+            </a>
+        </div>
+    </div></section>
+
+<!-- トップ→ニュース -->
+    <section class="news">
+        <img src="img/top_news_ue.png" class="ue" alt="" width="" height="">
+        <div class="w1200" id="news">
+            <h2>NEWS</h2>
+            <p class="sub">お知らせ</p>
+            <a href="news_a/index.html"><div class="box">
+                <div class="ir">
+                    <p class="day">2025 6.11</p>
+                    <p class="add">IRニュース</p>
+                    <p>安全講習会を実施しました。</p>
+                </div>
+                <p class="right">></p>
+            </div></a>
+            <a href="news_a/index.html"><div class="box">
+                <div class="all">
+                    <p class="day">2025 5.20</p>
+                    <p class="add">お知らせ</p>
+                    <p>創業80周年記念サイトを公開しました。</p>
+                </div>
+                <p class="right">></p>
+            </div></a>
+            <a href="news_a/index.html"><div class="box">
+                <div class="ir">
+                    <p class="day">2025 4.13</p>
+                    <p class="add">IRニュース</p>
+                    <p>「福山物流センター新築工事」竣工のお知らせ。</p>
+                </div>
+                <p class="right">></p>
+            </div></a>
+            <a href="news_a/index.html" class="under"><div class="box">
+                <div class="rec">
+                    <p class="day">2025 3.01</p>
+                    <p class="add">採用</p>
+                    <p>2026年度 新卒採用エントリーを開始しました。</p>
+                </div>
+                <p class="right">></p>
+            </div></a>
+        </div>
+        <img src="img/top_news_sita.png" class="sita" alt="" width="" height="">
+    </section>
+
+<!-- トップ→リクルート -->
+    <div class="recruitimg"></div>
+    <section class="recruit"><div class="w1200" id="recruit">
+        <h2>RECRUIT</h2>
+        <p class="sub">採用情報</p>
+        <div class="center">
+            <p>「建築で生きていく」覚悟を持ち、現場で、オフィスで、仲間とともに未来をつくる。
+            <br>あなたの手で、街の景色と暮らしを支える仕事に挑戦してみませんか？</p>
+            <a href="recruit/index.html" class="btn"><span class="btn_text">詳しく見る　＋</span></a>
+        </div>
+    </div></section>
+</main>
+
+<!-- トップ→フッター -->
+<footer>
+    <div class="w1200">
+        <div class="left">
+            <a href="index.html"><img src="img/footer_logo.png" alt="加山組のロゴ" width="150" height=""></a>
+            <p>株式会社加山組 東京本社
+            <br>〒103-0004 東京都中央区東日本橋2-12-8 加山ビル7F
+            <br>TEL：03-5843-XXXX</p>
+        </div>
+        <div class="right">
+            <nav>
+                <ul class="ue">
+                    <li><a href="about/index.html">加山組について</a></li>
+                    <li><a href="business/index.html">事業内容</a></li>
+                    <li><a href="recruit/index.html">採用情報</a></li>
+                    <li><a href="contact/index.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul class="naka">
+                    <li><a href="works_a/index.html">XYZオフィスビル新築工事(施工実績)</a></li>
+                    <li><a href="news_a/index.html">安全講習会を実施しました。(お知らせ)</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <ul>
+                    <li><a href="pp/index.html">プライバシーポリシー</a></li>
+                </ul>
+            </nav>
+            <p>@2025株式会社加山組</p>
+        </div>
+    </div>
+</footer>
+
+<!-- ヘッダー下線用JS -->
+<script>
+const nav = document.querySelector('.nav');
+const line = document.querySelector('.line');
+function moveLine(target) {
+    const rect = target.getBoundingClientRect();
+    const navRect = nav.getBoundingClientRect();
+    line.style.width = rect.width + 'px';
+    line.style.left = (rect.left - navRect.left) + 'px';
+}
+nav.querySelectorAll('li').forEach(li => {
+    li.addEventListener('mouseenter', () => {
+        moveLine(li);
+    });
+});
+const active = nav.querySelector('li.active');
+if (active) moveLine(active);
+nav.addEventListener('mouseleave', () => {
+    const active = nav.querySelector('li.active');
+    if (active) moveLine(active);
+});
+</script>
+
+<!-- トップに戻る用JS -->
+<script>
+  const text = document.getElementById("circleText");
+  const str = text.innerText;
+  text.innerHTML = "";
+  const radius = 55;
+  const deg = 360 / str.length;
+  str.split("").forEach((char, i) => {
+    const span = document.createElement("span");
+    span.innerText = char;
+    span.style.transform = `
+      rotate(${deg * i}deg)
+      translateY(-${radius}px)
+    `;
+    text.appendChild(span);
+  });
+  const pagetop = document.getElementById("pagetop");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      pagetop.classList.add("is-show");
+    } else {
+      pagetop.classList.remove("is-show");
+    }
+  });
+</script>
+
+</body>
+
+</html>
