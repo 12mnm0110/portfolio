@@ -314,7 +314,7 @@ footer .copy{
 
 /* 指輪 */
 .works .pallatena {
-    background-color: #67A6B1;
+    background-color: #676BB1;
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -325,6 +325,16 @@ footer .copy{
 /* YOI */
 .works .yoi {
     background-color: #D68996;
+    color: #fff;
+    font-weight: 500;
+    display: inline-block;
+    padding: 5px 20px;
+    border-radius: 25px;
+}
+
+/* 加山組 */
+.works .kayama {
+    background-color: #67A6B1;
     color: #fff;
     font-weight: 500;
     display: inline-block;
@@ -590,7 +600,7 @@ footer .copy{
 }
 
 .pallatena h4{
-    color: #67A6B1;
+    color: #676BB1;
 }
 
 /* ーーーーーーーーーーーーーーーーーー
@@ -614,7 +624,7 @@ footer .copy{
 }
 
 .kayama h4{
-    color: #81CFD1;
+    color: #67A6B1;
 }
 
 
