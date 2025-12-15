@@ -605,7 +605,17 @@ footer .copy{
     color: #D68996;
 }
 
+/* ーーーーーーーーーーーーーーーーーー
+　　　　　　加山組ページ
+ーーーーーーーーーーーーーーーーーー */
+/* 加山組→概要 */
+.kayama .frame{
+    background-color: #5481A6;    
+}
 
+.kayama h4{
+    color: #81CFD1;
+}
 
 
 
