@@ -453,6 +453,12 @@ footer .copy{
     gap: 20px;
 }
 
+.summary .time div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .summary .outline{
     display: flex;
     align-items: center;
@@ -655,7 +661,7 @@ footer .copy{
 　　　　　　　共通設定
 ーーーーーーーーーーーーーーーーーー */
 h2{
-    font-size: 35px;
+    font-size: 30px;
 }
 h3{
     font-size: 25px;
@@ -670,7 +676,13 @@ li{
     font-size: 15px;
 }
 
-
+.frame{
+    color: #fff;
+    font-weight: 400;
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 10px;    
+}
 
 
 /* ーーーーーーーーーーーーーーーーーー
@@ -769,17 +781,31 @@ nav.active {
     display: flex;
     align-items: center;
     gap: 20px;
+
+    flex-direction: column;
+}
+
+.summary .time div{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    gap: 10px;
 }
 
 .summary .outline{
     display: flex;
     align-items: center;
     gap: 50px;
+
+    flex-direction: column;
 }
 
 .summary .outline a{
     width: 50%;
     transition: transform 0.6s ease-in-out;
+
+    width: 100%;
 }
 
 .summary .outline a:hover {
