@@ -25,6 +25,15 @@
 .back-btn:hover img:hover{
     opacity:1;
 }
+@media(width<750px){
+.back-btn {  
+    top:65%;  
+    left: 30px;       
+}
+.back-btn img {
+    width: 50px;   
+}
+}
 
 /* ーーーーーーーーーーーーーーーーーー
 　　　　　　　共通設定
